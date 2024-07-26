@@ -18,6 +18,7 @@ import { formUrlQuery } from "@/lib/utils";
 import { Button } from "../ui/button";
 
 import { Search } from "./Search";
+import { Key } from "react";
 
 export const Collection = ({
   hasSearch = false,
@@ -56,7 +57,7 @@ export const Collection = ({
       {images.length > 0 ? (
         <ul className="collection-list">
           {images.map((image) => (
-            <Card image={image} key={image._id} />
+            <Card image={image} key={image._id as Key} />
           ))}
         </ul>
       ) : (
